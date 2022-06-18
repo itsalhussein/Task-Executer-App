@@ -12,14 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = HomeViewController()
-        _ = AppNavigator(window: window ?? UIWindow(), viewController: viewController)
-        
+        let newScreen = HomeViewController(with: HomeViewModel())
+        let nav = UINavigationController(rootViewController: newScreen)
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
         
         return true
     }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct LogModel {
+    var logDate : String
+    var taskNumber : String
+}
