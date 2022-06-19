@@ -97,6 +97,10 @@ class HomeViewController: UIViewController {
     
     private func doLightTask(tagOfSelectedButton: Int){
         if tagOfSelectedButton == 2 {
+            var counter = 0
+            for _ in 0..<99 {
+                counter += 1
+            }
             viewModel.populateLogData(tagOfSelectedButton)
         }
     }
